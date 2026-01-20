@@ -50,4 +50,14 @@
 #### Struct
 
  
+#### Context switching | PCB | Concurrency
+
+- controll unit
+- instruction register
+- proram counter
+- General Purpose Rgister
+- process controll Block (PCB) (OS) store state info (register set) all meta data
+- Concurrency: context switching and concurrently working as like as same time.
+- parallelism: without context swtching multiple process run with multiple logical cpu 
+- 
 
