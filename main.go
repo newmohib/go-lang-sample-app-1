@@ -124,7 +124,10 @@ func pointer() {
 	slice()
 
 	// variadic function can provide any number of arguments
-	variadicSum(1,2,3,4,5) 
+	variadicSum(1,2,3,4,5)
+
+	// Vogus Data types
+	vogusDataType()
 
 }
 
@@ -205,3 +208,41 @@ func variadicSum(a ...int) {
 }
 
 
+// Vogus Data Types
+
+
+func vogusDataType()  {
+	var a int8 = -128
+	var b int8 = 127
+	var x uint8 = 255 // unsigned (0 and only positive numbers)
+
+	var j float32 = 10.3333
+
+	var flag bool = true // 8 bit
+	// run
+	r := '😄' // alias for int32 (unicode point) -> 32 bits -> 4bytes -> %c
+
+	fmt.Printf("%c\n", r) // character => printf()
+	fmt.Printf("%d\n", a) // decimal => printf()
+	fmt.Printf("%f\n", j) // floating => printf()
+	fmt.Printf("%.2f\n", j) // floating and after decimal will be 2 character => printf()
+	fmt.Printf("%v\n", flag) // boolean => printf()
+	fmt.Printf("%T\n", b) // print type => printf()
+}
+
+
+
+func deferFunc()  {
+	//Defer
+	i := 0
+
+	fmt.Println("first", i) // i = 0
+
+	defer fmt.Println("second", i) // i = 0
+
+	i = i + 1 // or i++
+
+	fmt.Println("third", i) //  i = 1
+
+	return
+}
